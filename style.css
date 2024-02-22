@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* uso linear gradient per impostare il colore di sfondo, a 150px il colore cambia da verde a grigio */
+    background: linear-gradient(#009688 0%, #009688 150px, #dbdbd3 150px, #dbdbd3 100%);
+}

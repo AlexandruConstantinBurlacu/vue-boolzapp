@@ -11,12 +11,29 @@ body {
     align-items: center;
     min-height: 100vh;
     /* uso linear gradient per impostare il colore di sfondo, a 150px il colore cambia da verde a grigio */
-    background-color: linear-gradient(#009688 0%, #009688 150px, #dbdbd3 150px, #dbdbd3 100%);
+    background: linear-gradient(#009688 0%, #009688 150px, #dbdbd3 150px, #dbdbd3 100%);
 }
 
 .container {
+    display: flex;
     position: relative;
     width: 1600px;
+    max-width: 100%;
     height: calc(100vh - 25px);
-    background-color: white;
+    background: white;
 }
+
+.container .left {
+    position: relative;
+    flex: 40%;
+    /* test */
+    background-color: rgba(255, 0, 0, 0.458);
+}
+
+.container .right {
+    position: relative;
+    flex: 60%;
+    /* test */
+    background-color: rgba(0, 0, 255, 0.416);
+}
+

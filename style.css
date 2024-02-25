@@ -35,6 +35,8 @@ body {
     background-image: url(img/mine.jpg);
 }
 
+/* profilo utente */
+
 .userProfile {
     display: flex;
     justify-content: space-between;
@@ -77,4 +79,78 @@ body {
     color: #b1b1b1;
     font-size: 22px;
     margin-right: 20px;
+}
+
+/* sezione notifiche */
+
+.notifications {
+    position: relative;
+    width: 100%;
+    height: 82px;
+    background-color: #8edafc;
+}
+
+.notifications .notificationsContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+.notificationsContainer .notificationsIcon {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f2fbff;
+}
+
+.notificationsInfo p {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #7fa3a2;
+}
+
+
+
+/* sezione ricerca chat */
+
+.newChat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 7px;
+    width: 100%;
+    height: 50px;
+    background-color: #fafafa;
+}
+
+.newChat div {
+    width: 100%;
+    display: flex;
+}
+
+.newChat div i {
+    padding: 10px;
+    height: 36px;
+    flex: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b7b8b9;
+    cursor: pointer;
+}
+
+.newChat div input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: white;
+    padding: 10px;
+    height: 36px;
+    flex: 80%;
 }

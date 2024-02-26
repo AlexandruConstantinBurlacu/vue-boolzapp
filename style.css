@@ -182,17 +182,7 @@ body {
     gap: 10px;
 }
 
-.chatContainer .chatIcon {
-    position: relative;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: #f2fbff;
-}
-
 .chatContainer .chatIcon img {
-    position: relative;
     width: 52px;
     height: 52px;
     border-radius: 50%;
@@ -207,7 +197,38 @@ body {
 
 /* sezione destra */
 
+/* sezione box messaggi */
 
+.messageBox {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 144px);  
+    /* 72 + 72, le dimensioni della sezione invia messaggio e chat info */
+    padding: 56px 104px;
+}
+
+.myMessage {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.myMessage p {
+    position: relative;
+    background-color: #d5f9ba;
+    padding: 22px 118px 22px 16px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.friendMessage p {
+    max-width: 70%;
+    position: relative;
+    background-color: white;
+    padding: 22px 118px 22px 16px;
+    border-radius: 10px;
+}
 
 
 /* sezione invia messaggio */
@@ -220,7 +241,7 @@ body {
     padding: 7px;
     width: 100%;
     height: 72px;
-    background-color: #fafafa;
+    background-color: #f3eeea;
 }
 
 .sendMessage div {
@@ -247,4 +268,5 @@ body {
     padding: 10px;
     height: 52px;
     flex: 80%;
+    border-radius: 5px;
 }

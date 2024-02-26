@@ -83,13 +83,16 @@
             <!-- sezione destra -->
     
             <div class="right">
-                <div class="userProfile">
+                
                     <div class="userProfile">
-                        <div class="leftProfile">
+                        <div class="textingImage">
                             <div class="userImage">
                                 <img src="img/avatar_io.jpg" alt="Your Image">
                             </div>
-                            <h4>Sofia</h4>
+                            <div>
+                                <h4>Michele</h4>
+                                <p>Ultimo Accesso</p>
+                            </div>
                         </div>
                         <ul class="userIcons">
                             <li>
@@ -103,26 +106,21 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                
 
                 <!-- sezione box messaggi -->
-                <div class="messageBox">
-                    <div class="message myMessage">
-                        <p>ciao a tutti</p>
+                <div class="boxMessages">
+                    <div class="message myMessage" v-for="(message, index) in contacts[currentContactIndex].messages" :key="index" :class="{ 'myMessage': message.status === 'sent', 'friendMessage': message.status === 'received' }">
+                        <p>{{ message.message }} <span>{{ message.date }}</span></p>
                     </div>
+
                     <div class="message friendMessage">
-                        <p>hola amigo</p>
+                        <p>Il tuo messaggio <span>Orario</span></p>
                     </div>
                 </div>
 
                 <!-- sezione scrivi messaggio -->
-                <div class="sendMessage">
-                    <div>
-                        <i class="fa-regular fa-face-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
-                        <i class="fa-solid fa-microphone"></i>
-                    </div>
-                </div>
+                
             </div>
         </div>
 

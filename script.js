@@ -174,6 +174,11 @@ const app = createApp({
     methods: {
         setCurrentContact(index) {
             this.currentContactIndex = index;
+        },
+
+        getLastMessage(contact) {
+            const lastMessage = contact.messages[contact.messages.length - 1];
+            return lastMessage ? lastMessage.message : '';
         }
     },
 }); app.mount('#app');

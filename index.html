@@ -11,60 +11,83 @@
     <script src="https://kit.fontawesome.com/bde75078f7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <!-- Vue -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 
-        <!-- sezione sinistra -->
-        <div class="left">
+    <div id="app">
 
-            <!-- profilo utente -->
-            <div class="userProfile">
-                <div class="leftProfile">
-                    <div class="userImage">
-                        <img src="img/avatar_io.jpg" alt="Your Image">
+        <div class="container">
+
+            <!-- sezione sinistra -->
+            <div class="left">
+    
+                <!-- profilo utente -->
+                <div class="userProfile">
+                    <div class="leftProfile">
+                        <div class="userImage">
+                            <img src="img/avatar_io.jpg" alt="Your Image">
+                        </div>
+                        <h4>Sofia</h4>
                     </div>
-                    <h4>Sofia</h4>
+                    <ul class="userIcons">
+                        <li>
+                            <i class="fa-solid fa-circle-notch"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-message"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="userIcons">
-                    <li>
-                        <i class="fa-solid fa-circle-notch"></i>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-message"></i>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- sezione notifiche -->
-            <div class="notifications">
-                <div class="notificationsContainer">
-                    <div class="notificationsIcon">
-                        <i class="fa-solid fa-bell-slash"></i>
+    
+                <!-- sezione notifiche -->
+                <div class="notifications">
+                    <div class="notificationsContainer">
+                        <div class="notificationsIcon">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="notificationsInfo">
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <p>Attiva notifiche desktop</p>
+                        </div>
                     </div>
-                    <div class="notificationsInfo">
-                        <h4>Ricevi notifiche di nuovi</h4>
-                        <p>Attiva notifiche desktop</p>
+                </div>
+    
+    
+                <!-- sezione ricerca chat -->
+                <div class="newChat">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
-            </div>
-
-
-            <!-- sezione ricerca chat -->
-            <div class="newChat">
-                <div>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+    
+                <!-- sezione chat -->
+    
+                <div class="chat">
+                    <div v-for="(contact, index) in contacts" :key="index" @click="setCurrentContact(index)" class="chatContainer">
+                        <div class="chatIcon">
+                            <img :src="contact.avatar" alt="Contact Avatar">
+                        </div>
+                        <div class="chatInfo">
+                            <h4>{{ contact.name }}</h4>
+                            <p>Attiva notifiche desktop</p>
+                        </div>
+                    </div>
                 </div>
+    
             </div>
-
+    
+            <div class="right">
+    
+            </div>
         </div>
 
-        <div class="right">
-
-        </div>
     </div>
+
+    
 
 
 
